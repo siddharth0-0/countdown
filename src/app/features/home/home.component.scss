@@ -1,15 +1,12 @@
 .container{
-    // background-image: linear-gradient(to left bottom, #303030, #373639, #3d3d42, #44434b, #4b4a54);
     width:100vw;
     background-color: #2c302d;
-    height: 100%;
-    padding: 10px;
-
+    height: 100vh;
     .head-wrapper{
         text-align: center;
-        font-family: 'poppins',sans-serif;
+        color: whitesmoke;
+        font: normal normal 600 25px 'poppins';
     }
-
     .content-wrapper{
         margin: 4rem 1rem;
         display: flex;
@@ -23,14 +20,14 @@
             border-radius: 20px;
             background-color: #242625;
             box-shadow: 25px 25px 50px #1b1c1b, -25px -25px 50px #2d302f;
-            transition: 1.5s ease-in-out;
+            cursor: pointer;
             .card-text{
                 text-align: center;
+                height: 100%;
                 color: whitesmoke;
                 p{
-                    font-size: 16px;
-                    font-weight: 600;
-                    text-transform: uppercase;
+                    font: normal normal normal 18px Soleil;
+                    text-transform: capitalize;
                     letter-spacing: 1px;
                 }
             }

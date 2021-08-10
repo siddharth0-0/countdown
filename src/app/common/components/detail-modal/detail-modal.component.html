@@ -6,25 +6,23 @@
                     <label>Name</label>
                     <input type="text" placeholder="John" formControlName = "in_name">
                 </div>
+                <div class="small-in">
+                    <label>Message</label>
+                    <input type="text" placeholder="Place your message"  formControlName = "in_message">
+                </div>
             </div>
             <div class="in-row">
                 <div class="small-in">
                     <label>Select Date</label>
-                    <input type="date" formControlName = "in_date">
+                    <input type="date" formControlName = "in_date" required>
                 </div>
                 <div class="small-in">
                     <label>Select Time</label>
-                    <input type="time" formControlName = "in_time">
-                </div>
-            </div>
-            <div class="in-row">
-                <div class="long-in">
-                    <label >Message</label>
-                    <input type="text" placeholder="Place your message" formControlName = "in_message">
+                    <input type="time" formControlName = "in_time" required>
                 </div>
             </div>
             <div class="button-box">
-                <button (click) = "onStart()">Start</button>
+                <button type="submit" (click) = "onStart()">Start</button>
             </div>
         </div>
     </div>
@@ -34,18 +32,13 @@
 
     <div class="view-modal" *ngIf = "_openFor === 1">
         <div class="content-wrapper">
-            <div class="left-box">
-                <img src="" alt="">
+            <div class="in-box">
+                <label>Enter The 6 digit countKey</label>
+                <input type="text" placeholder="keyXXX" required [(ngModel)] = "viewKey">
             </div>
-            <div class="right-box">
-                <div class="in-box">
-                    <label>Enter The 6 digit countKey</label>
-                    <input type="text" placeholder="keyXXX" required [(ngModel)] = "viewKey">
-                </div>
 
-                <div class="btn-box">
-                    <button type="submit" (click) = "onView()">View</button>
-                </div>
+            <div class="btn-box">
+                <button type="submit" (click) = "onView()">View</button>
             </div>
         </div>
 

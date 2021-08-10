@@ -10,8 +10,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component :HomeComponent },
   { path: 'option', component :CountdownOptionComponent },
-  { path: 'custom', component :CustomCountdownComponent },
-  { path: 'view', component :ViewCountdownComponent },
+  { path: 'custom/:id', component :CustomCountdownComponent },
+  { path: 'view/:id', component :ViewCountdownComponent },
   { path: 'dataTable', component :CountdownTableComponent },
 ];
 

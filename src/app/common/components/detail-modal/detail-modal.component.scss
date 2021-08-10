@@ -12,9 +12,9 @@
         top: 50%;
         transform: translate(-50%, -50%);
         z-index: 4;
-        box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
-        height: 380px;
-        background-color: #d7e0df;
+        box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.8);
+        height: 280px;
+        background-color: #95B0B5;
         width: 650px;
         border-radius: 20px;
         .content-wrapper{
@@ -33,29 +33,16 @@
                     label{
                         font: normal normal normal 18px Soleil;
                         margin: 5px 0;
+                        color: #003547;
                     }
                     input{
                         width: 100%;
                         height: 38px;
                         padding: 0 5px;
                         border-radius: 4px;
+                        border: none;
                     }
                 }
-                .long-in{
-                    display: flex;
-                    flex-direction: column;
-                    width: 100%;
-                    label{
-                        font: normal normal normal 18px Soleil;
-                        margin: 5px 0;
-                    }
-                    input{
-                        width: 100%;
-                        height: 38px;
-                        border-radius: 4px;
-                        padding: 0 5px;
-                    }
-                }  
             }
             .button-box{
                 display: flex;
@@ -64,10 +51,11 @@
                     width: 175px;
                     height: 30px;
                     font: normal normal 600 14px Soleil;
-                    background-color: #fc9d0c;
+                    background-color: #003547;
                     border-radius: 5px;
                     border: none;
                     cursor: pointer;
+                    color: #95B0B5;
                 }
             } 
         }
@@ -78,7 +66,7 @@
         height: auto;
         min-height: 100%;
         position: absolute;
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.65);
         top: 0;
         left: 0;
     }
@@ -89,52 +77,48 @@
         top: 50%;
         transform: translate(-50%, -50%);
         z-index: 4;
-        box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
+        box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.8);
         height: 250px;
-        background-color: #d7e0df;
+        background-color: #95B0B5;
         width: 500px;
         border-radius: 20px;
         .content-wrapper{
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
             height: 100%;
-            .left-box{
-                width: 50%;
-                height: 100%;
-                border-right: 2px solid #fc9d0c;
-            }
-            .right-box{
-                width: 50%;
+            padding: 15px;
+            .in-box{
                 display: flex;
-                justify-content: space-around;
                 flex-direction: column;
-                padding: 25px;
-                .in-box{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-                    align-items: center;
-                    height: 100px;
-                    label{
-                        font: normal normal 600 16px Soliel;
-
-                    }
-                    input{
-                        width: 75%;
-                        padding: 0 8px ;
-                        height: 30px;
-                        border-radius: 5px;
-                    }
-                }
-                .btn-box{
+                height: 70px;
+                justify-content: space-between;
+                label{
+                    font: normal normal 600 18px Soliel;
+                    color: #003547;
                     text-align: center;
-                    button{
-                        width: 60%;
-                        height: 30px;
-                        background: #fc9d0c;
-                        cursor: pointer;
-                    }
+                }
+                input{
+                    width: 275px;
+                    padding: 0 8px ;
+                    height: 32px;
+                    border-radius: 4px;
+                    border: none;
                 }
             }
+            .btn-box{
+                text-align: center;
+                button{
+                    width: 200px;
+                    border-radius: 5px;
+                    height: 30px;
+                    background: #003547;
+                    cursor: pointer;
+                    color: #95B0B5;
+                }
+            }
+            
         }
     }
 }

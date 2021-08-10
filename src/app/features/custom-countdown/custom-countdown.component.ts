@@ -24,7 +24,7 @@ export class CustomCountdownComponent implements OnInit ,OnDestroy {
   public remainingMinutes : number = 0
   public remainingHours : number = 0
   public remainingDays : number = 0
-  public showMessage :string = 'Counting....';
+  public showMessage :string = 'Counting...';
 
   constructor( private  _shareInfoService : ShareInfoService,) { 
 

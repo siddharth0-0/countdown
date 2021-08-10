@@ -86,14 +86,14 @@ export class DetailModalComponent implements OnInit {
     });
     this.CreateRecord() //Sends record to the firestore db
     this.isShowModal = false;
-    this._router.navigate(['custom']);
+    this._router.navigate(['custom',this._idKey]);
   }
 
   onView(){
     console.log('viewKey-step1',this.viewKey);
     this._shareInfoService.sharedViewCountdownKey = this.viewKey;
     this.isShowModal = false;
-    this._router.navigate(['view']);
+    this._router.navigate(['view',this.viewKey]);
   }
 
   onCloseModal(){

@@ -1,62 +1,3 @@
-// .container{
-//     height: 100vh;
-//     width: 100vw;
-//     padding: 20px;
-//     background: #e0e5ec;
-//     .head-wrapper{
-//         text-align: center;
-//         h1{
-//             font-family: 'poppins',sans-serif;
-//             font-weight: 700;
-//             font-size: 30px;
-//         }
-//     }
-//     .content-wrapper{
-//         width: 100%;
-//         margin: 4rem 0;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         .t-wrapper{
-//             top: 50%;
-//             display: flex;
-//             justify-content: space-evenly;
-//             align-items: center;
-//             height: 120px;
-//             flex-direction: column;
-//             width: 500px;
-//             border-radius: 20px;
-//             box-shadow: 7px 7px 25px rgba(198, 206, 237, .7),
-//             -7px -7px 35px rgba(255, 255, 255, .7),
-//             inset 0px 0px 4px rgba(255, 255, 255, .9),
-//             inset 7px 7px 15px rgba(198, 206, 237, .8); 
-//             .timer{
-//                 display: flex;
-//                 flex-direction: row;
-//                 justify-content: space-evenly;
-//                 align-items: center;
-//                 width: 100%;
-//                 font-family: 'Orbitron', sans-serif;
-//                 color: #1C2B2D;
-//             }
-//             .t-head{
-//                 display: flex;
-//                 flex-direction: row;
-//                 justify-content: space-around;
-//                 align-items: center;
-//                 width: 100%;
-//                 p{
-//                     font-weight: 800;
-//                     color: #8AC4D5;
-//                     // background-color: burlywood;
-//                     // height: 40px;
-//                     // width: 55px;
-//                     font-family: 'Orbitron', sans-serif;
-//                 }
-//             }
-//         }
-//     }
-// }
 .main-wrapper{
     width: 100vw;
     height: 100vh;
@@ -69,7 +10,7 @@
     .top-box{
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         width: 65%;
         height: 350px;
@@ -109,6 +50,8 @@
         }
         .message-box{
             color: #4d445a;
+            position: absolute;
+            top: 55%;
             font: normal normal 600 20px Soleil;
             letter-spacing: 1.2px;
         }
@@ -119,7 +62,7 @@
         width: 225px;
         justify-content: space-between;
         label{
-            font: normal normal normal 14px Soleil;
+            font: normal normal 600 14px Soleil;
             color: #8e81a0;
         }
         span{
