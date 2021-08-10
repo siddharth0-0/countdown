@@ -1,0 +1,135 @@
+// .container{
+//     height: 100vh;
+//     width: 100vw;
+//     padding: 20px;
+//     background: #e0e5ec;
+//     .head-wrapper{
+//         text-align: center;
+//         h1{
+//             font-family: 'poppins',sans-serif;
+//             font-weight: 700;
+//             font-size: 30px;
+//         }
+//     }
+//     .content-wrapper{
+//         width: 100%;
+//         margin: 4rem 0;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         .t-wrapper{
+//             top: 50%;
+//             display: flex;
+//             justify-content: space-evenly;
+//             align-items: center;
+//             height: 120px;
+//             flex-direction: column;
+//             width: 500px;
+//             border-radius: 20px;
+//             box-shadow: 7px 7px 25px rgba(198, 206, 237, .7),
+//             -7px -7px 35px rgba(255, 255, 255, .7),
+//             inset 0px 0px 4px rgba(255, 255, 255, .9),
+//             inset 7px 7px 15px rgba(198, 206, 237, .8); 
+//             .timer{
+//                 display: flex;
+//                 flex-direction: row;
+//                 justify-content: space-evenly;
+//                 align-items: center;
+//                 width: 100%;
+//                 font-family: 'Orbitron', sans-serif;
+//                 color: #1C2B2D;
+//             }
+//             .t-head{
+//                 display: flex;
+//                 flex-direction: row;
+//                 justify-content: space-around;
+//                 align-items: center;
+//                 width: 100%;
+//                 p{
+//                     font-weight: 800;
+//                     color: #8AC4D5;
+//                     // background-color: burlywood;
+//                     // height: 40px;
+//                     // width: 55px;
+//                     font-family: 'Orbitron', sans-serif;
+//                 }
+//             }
+//         }
+//     }
+// }
+.main-wrapper{
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #8e81a0, #817493, #756886, #685c79, #5c506c);
+    .top-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 65%;
+        height: 350px;
+        background: #e3e0e6;
+        border-radius: 25px;
+        .timer-box{
+            width: 75%;
+            height: 200px;
+            display: flex;
+            // background: #4d445a;
+            background-image: linear-gradient(to right top, #6c607d, #645974, #5c526b, #554b63, #4d445a);
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #f4f4f5;
+            border-radius: 25px;
+            .t-head{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 80%;
+                color: #8e81a0;
+                font: normal normal normal 14px Soleil;
+            }
+            .count{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 80%;
+                color: #f4f4f5;
+                font: normal normal normal 30px/110px Soleil;
+                letter-spacing: 1px;
+                span{
+                    font: normal normal normal 15px Soleil;
+                }
+            }
+        }
+        .message-box{
+            color: #4d445a;
+            font: normal normal 600 20px Soleil;
+            letter-spacing: 1.2px;
+        }
+        
+    }
+    .key-box{
+        display: flex;
+        width: 225px;
+        justify-content: space-between;
+        label{
+            font: normal normal normal 14px Soleil;
+            color: #8e81a0;
+        }
+        span{
+            width: 150px;
+            color: #4d445a;
+            font: normal normal 600 16px Soleil;
+            background: whitesmoke;
+            border-radius: 25px;
+            padding: 5px;
+            text-align: center;
+        }
+    }
+}

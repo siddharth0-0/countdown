@@ -1,0 +1,44 @@
+.main-wrapper{
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 15px 25px;
+    .title-row{
+        text-align: center;
+        margin: 15px 0;
+        h1{
+            font: normal normal 600 18px/20px Soleil;
+            letter-spacing: 1px;
+        }
+    }
+    table{
+        width: 100%;
+        margin-top: 4rem;
+        thead{
+            width: 100%;
+            border-bottom:2px solid #777777;
+            letter-spacing: 0.5px;
+            tr{
+                text-align: left;
+                th{
+                    font: normal normal 600 16px/16px Soleil;
+                    letter-spacing: 0.8px;
+                    color: #242424;
+                    padding: 1rem 0;
+                }
+            }
+        }
+        tbody{
+            width: 100%;
+            tr{
+                text-align: left;
+                border-bottom:0.8px solid #a7a7a7;
+                td{
+                    font: normal normal 500 15px Soleil;
+                    letter-spacing: 0.75px;
+                    color: #3E3E3E;
+                    padding: 1rem 0;
+                }
+            }
+        }
+    }
+}
