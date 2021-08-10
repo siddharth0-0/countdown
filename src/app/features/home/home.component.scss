@@ -1,7 +1,7 @@
 .container{
     width:100vw;
     background-color: #2c302d;
-    height: 100vh;
+    min-height: 100vh;
     .head-wrapper{
         text-align: center;
         color: whitesmoke;
@@ -81,6 +81,13 @@
                 font-family: 'Orbitron', sans-serif;
             }
         }
+        @media only screen and (max-width: 1290px){
+            .card{
+                .time-box{
+                    font: normal normal 600 14px 'Orbitron';
+                }
+            }
+        }
         .card:hover{          
             width: 480px;
             height: 300px;
@@ -96,7 +103,25 @@
                 font-family: 'poppins',sans-serif;
                 color: whitesmoke;
             }
+            @media only screen and (max-width: 1290px){
+                width: 380px;
+                height: 250px;
+                margin: 10px;
+                .time-box{
+                    flex-direction: column;
+                }
+                .card-text{
+                    p{
+                        font: normal normal normal 12px 'poppins';
+                    }
+                    
+                }
+            }
         }
 
+    }
+    @media only screen and (max-width: 1290px){
+        height: 100%;
+        padding: 10px;
     }
 }
