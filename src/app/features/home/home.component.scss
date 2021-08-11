@@ -5,10 +5,12 @@
     .head-wrapper{
         text-align: center;
         color: whitesmoke;
-        font: normal normal 600 25px 'poppins';
+        h2{
+            font: normal normal normal 30px 'poppins';
+        }
     }
     .content-wrapper{
-        margin: 4rem 1rem;
+        margin: 3.5rem 1rem;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -18,17 +20,33 @@
             width: 380px;
             height: 250px;
             border-radius: 20px;
-            background-color: #242625;
-            box-shadow: 25px 25px 50px #1b1c1b, -25px -25px 50px #2d302f;
+            background-color: #2c302d;
+            // box-shadow: 25px 25px 50px #1b1c1b, -25px -25px 50px #2d302f;
             cursor: pointer;
+            border: 2px solid whitesmoke;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
             .card-text{
                 text-align: center;
-                height: 100%;
                 color: whitesmoke;
                 p{
-                    font: normal normal normal 18px Soleil;
+                    font: normal normal normal 18px 'poppins';
                     text-transform: capitalize;
                     letter-spacing: 1px;
+                }
+            }
+            .card-img{
+                width: 250px;
+                height: 200px;
+                transition: 1s all ease-in;
+                img{
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 20px;
+                    opacity: 0.7;
                 }
             }
         }
@@ -67,7 +85,6 @@
                 }
             }
             .time-box{
-                z-index: 999;
                 position: absolute;
                 top: 30%;
                 color: whitesmoke;
@@ -118,7 +135,6 @@
                 }
             }
         }
-
     }
     @media only screen and (max-width: 1290px){
         height: 100%;
