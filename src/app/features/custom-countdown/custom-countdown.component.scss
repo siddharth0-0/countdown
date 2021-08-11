@@ -51,7 +51,7 @@
         .message-box{
             color: #4d445a;
             position: absolute;
-            top: 55%;
+            top: 56%;
             font: normal normal 600 20px Soleil;
             letter-spacing: 1.2px;
         }
@@ -73,6 +73,23 @@
             border-radius: 25px;
             padding: 5px;
             text-align: center;
+        }
+    }
+    @media only screen and (max-width: 750px){
+        .top-box{
+            width: 90%;
+            .timer-box{
+                width: 85%;
+                .t-head{
+                    font: normal normal normal 12px/30px Soleil;
+                }
+                .count{
+                    font: normal normal normal 18px Soleil;
+                }
+            }
+            .message-box{
+                top: 60%;
+            }
         }
     }
 }

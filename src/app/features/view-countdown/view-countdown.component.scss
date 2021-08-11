@@ -15,6 +15,7 @@
         .mess-box{
             padding: 25px;
             font: normal normal 700 45px Soleil;
+            letter-spacing: 1px;
         }
         .key-box{
             justify-content: space-around;
@@ -42,9 +43,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        // background: #DCF0E2;
-        // background-image: linear-gradient(to right bottom, #e8f3f1, #bfe9e1, #93dfcf, #62d4bc, #00c9a7);
-        // background-image: linear-gradient(to left top, #ebfdf8, #c2f1e4, #96e4d0, #64d7bb, #00c9a7);
         background-image: linear-gradient(to right bottom, #dcf0e2, #bbe6ce, #96ddbe, #67d3b1, #00c9a7);
         .timer{
             width: 750px;
@@ -74,6 +72,25 @@
                     font: normal normal normal 14px Soleil;
                     padding: 5px 0;
                 }
+            }
+        }
+    }
+    @media only screen and (max-width: 780px){
+        .left-wrap{
+            padding: 1rem;
+            width: 40%;
+            .mess-box{
+                padding: 15px;
+                font: normal normal 600 25px Soleil;
+            }
+        }
+        .right-wrap{
+            padding: 1rem;
+            width: 60%;
+            .timer{
+                height: 90%;
+                width: 100%;
+                flex-direction: column;
             }
         }
     }

@@ -18,7 +18,7 @@ export class ViewCountdownComponent implements OnInit {
   public remainingMinutes : number = 0
   public remainingHours : number = 0
   public remainingDays : number = 0
-  public showMessage : string = 'Still Counting....'
+  public showMessage : string = 'Still Counting...'
 
   _date :any;
   _time:any;
