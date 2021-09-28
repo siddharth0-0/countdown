@@ -1,31 +1,32 @@
 <div class="modal-wrapper" *ngIf="isShowModal == true">
-    <div class="create-box" *ngIf = "_openFor === 2" [formGroup]="modalForm">
+    <form class="create-box" *ngIf = "_openFor === 2" [formGroup]="modalForm" (ngSubmit)="onStart()">
         <div class="content-wrapper">
             <div class="in-row">
                 <div class="small-in">
                     <label>Name</label>
-                    <input type="text" placeholder="John" formControlName = "in_name">
+                    <input type="text" placeholder="John" [class.is-invalid]= "modalForm.controls['in_name']?.invalid && modalForm.controls['in_name']?.touched" formControlName = "in_name">
                 </div>
                 <div class="small-in">
                     <label>Message</label>
-                    <input type="text" placeholder="Place your message"  formControlName = "in_message">
+                    <input type="text" placeholder="Place your message" [class.is-invalid]= "modalForm.get('in_message')?.invalid && modalForm.get('in_message')?.touched"  formControlName = "in_message">
                 </div>
             </div>
             <div class="in-row">
                 <div class="small-in">
                     <label>Select Date</label>
-                    <input type="date" formControlName = "in_date" required>
+                    <input type="date" formControlName = "in_date" [class.is-invalid]= "modalForm.get('in_date')?.invalid && modalForm.get('in_date')?.touched"  required>
                 </div>
                 <div class="small-in">
                     <label>Select Time</label>
-                    <input type="time" formControlName = "in_time" required>
+                    <input type="time" formControlName = "in_time" [class.is-invalid]= "modalForm.get('in_time')?.invalid && modalForm.get('in_time')?.touched"  required>
                 </div>
             </div>
             <div class="button-box">
-                <button type="submit" (click) = "onStart()">Start</button>
+                <button type="submit" [disabled]="!modalForm.valid">Start</button>
+                <!-- <button type="submit" (click) = "onStart()">Start</button> -->
             </div>
         </div>
-    </div>
+    </form>
 
 
     <div class="modal-background" *ngIf="isShowModal == true" (click) = "onCloseModal()"></div>
