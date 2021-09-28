@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   }
 
   oceanDayDate = new Date('June 8, 2022 00:00:00').getTime()
-  peaceDayDate = new Date('September 21, 2021 00:00:00').getTime()
+  peaceDayDate = new Date('September 21, 2022 00:00:00').getTime()
   earthDayDate = new Date('April 22, 2022 00:00:00').getTime()
   yogaDayDate = new Date('June 21, 2022 00:00:00').getTime()
   wildlifeDayDate = new Date('March 3, 2022 00:00:00').getTime()
