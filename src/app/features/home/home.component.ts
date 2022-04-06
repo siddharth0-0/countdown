@@ -21,9 +21,9 @@ export class HomeComponent implements OnInit {
 
   oceanDayDate = new Date('June 8, 2022 00:00:00').getTime()
   peaceDayDate = new Date('September 21, 2022 00:00:00').getTime()
-  earthDayDate = new Date('April 22, 2022 00:00:00').getTime()
+  earthDayDate = new Date('April 22, 2023 00:00:00').getTime()
   yogaDayDate = new Date('June 21, 2022 00:00:00').getTime()
-  wildlifeDayDate = new Date('March 3, 2022 00:00:00').getTime()
+  wildlifeDayDate = new Date('March 3, 2023 00:00:00').getTime()
 
   oceanDay(){
     var currentDate = new Date().getTime()
@@ -117,9 +117,3 @@ export class HomeComponent implements OnInit {
     clearInterval(this.timer);
   }
 }
-
-
-// this.sec = 1000
-// this.min = this.sec * 60
-// this.hour = this.min * 60
-// this.day = this.hour * 24
