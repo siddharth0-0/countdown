@@ -23,7 +23,8 @@ import { CountdownTableComponent } from './countdown-table/countdown-table.compo
   imports: [
     CommonModule,
     FormsModule,
-    FeaturesRoutingModule,ShareModule
+    FeaturesRoutingModule,
+    ShareModule
   ]
 })
 export class FeaturesModule { }

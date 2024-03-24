@@ -1,4 +1,4 @@
-<div class="modal-wrapper" *ngIf="isShowModal == true">
+<div class="modal-wrapper" *ngIf="isShowModal">
     <form class="create-box" *ngIf = "_openFor === 2" [formGroup]="modalForm" (ngSubmit)="onStart()">
         <div class="content-wrapper">
             <div class="in-row">
@@ -14,11 +14,11 @@
             <div class="in-row">
                 <div class="small-in">
                     <label>Select Date</label>
-                    <input type="date" formControlName = "in_date" [class.is-invalid]= "modalForm.get('in_date')?.invalid && modalForm.get('in_date')?.touched"  required>
+                    <input type="date" formControlName = "in_date" [class.is-invalid]= "modalForm.get('in_date')?.invalid && modalForm.get('in_date')?.touched" required>
                 </div>
                 <div class="small-in">
                     <label>Select Time</label>
-                    <input type="time" formControlName = "in_time" [class.is-invalid]= "modalForm.get('in_time')?.invalid && modalForm.get('in_time')?.touched"  required>
+                    <input type="time" formControlName = "in_time" [class.is-invalid]= "modalForm.get('in_time')?.invalid && modalForm.get('in_time')?.touched" required>
                 </div>
             </div>
             <div class="button-box">
@@ -29,7 +29,7 @@
     </form>
 
 
-    <div class="modal-background" *ngIf="isShowModal == true" (click) = "onCloseModal()"></div>
+    <div class="modal-background" *ngIf="isShowModal" (click)="onCloseModal()"></div>
 
     <div class="view-modal" *ngIf = "_openFor === 1">
         <div class="content-wrapper">

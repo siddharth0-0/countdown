@@ -8,112 +8,63 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  gap :any
-  sec : number = 1000
-  min : number = this.sec * 60
-  hour : number = this.min * 60
-  day : number = this.hour * 24
+  oceanDayDate!: number;
+  peaceDayDate!: number
+  earthDayDate!: number;
+  yogaDayDate!: number;
+  wildlifeDayDate!: number;
+  timer: any;
 
   constructor(private router : Router) { }
 
   ngOnInit(): void {
+    this.setEventDates();
   }
 
-  oceanDayDate = new Date('June 8, 2022 00:00:00').getTime()
-  peaceDayDate = new Date('September 21, 2022 00:00:00').getTime()
-  earthDayDate = new Date('April 22, 2023 00:00:00').getTime()
-  yogaDayDate = new Date('June 21, 2022 00:00:00').getTime()
-  wildlifeDayDate = new Date('March 3, 2023 00:00:00').getTime()
-
-  oceanDay(){
-    var currentDate = new Date().getTime()
-    this.gap = this.oceanDayDate - currentDate
-    console.log(this.gap,'gap')
-
-    let d  = Math.floor(this.gap / (this.day))
-    let h = Math.floor((this.gap % (this.day)) / (this.hour))
-    let m = Math.floor((this.gap % (this.hour)) / (this.min))
-    let s = Math.floor((this.gap % (this.min) / this.sec))
-
-    document.getElementById('oday')!.innerHTML  = String(d) ;
-    document.getElementById('ohour')!.innerHTML = String(h);
-    document.getElementById('ominute')!.innerHTML = String(m);
-    document.getElementById('osec')!.innerHTML = String(s);
-  }
-
-  peaceDay(){
-    var currentDate = new Date().getTime()
-    this.gap = this.peaceDayDate - currentDate
-
-    let d  = Math.floor(this.gap / (this.day))
-    let h = Math.floor((this.gap % (this.day)) / (this.hour))
-    let m = Math.floor((this.gap % (this.hour)) / (this.min))
-    let s = Math.floor((this.gap % (this.min) / this.sec))
-
-    document.getElementById('pDay')!.innerHTML  = String(d) ;
-    document.getElementById('pHour')!.innerHTML = String(h);
-    document.getElementById('pMinute')!.innerHTML = String(m);
-    document.getElementById('pSec')!.innerHTML = String(s);
-  }
-
-  earthDay(){
-    var currentDate = new Date().getTime()
-    this.gap = this.earthDayDate - currentDate
-
-    let d  = Math.floor(this.gap / (this.day))
-    let h = Math.floor((this.gap % (this.day)) / (this.hour))
-    let m = Math.floor((this.gap % (this.hour)) / (this.min))
-    let s = Math.floor((this.gap % (this.min) / this.sec))
-
-    document.getElementById('eDay')!.innerHTML  = String(d) ;
-    document.getElementById('eHour')!.innerHTML = String(h);
-    document.getElementById('eMinute')!.innerHTML = String(m);
-    document.getElementById('eSec')!.innerHTML = String(s);
-  }
-
-  yogaDay(){
-    var currentDate = new Date().getTime()
-    this.gap = this.yogaDayDate - currentDate
-
-    let d  = Math.floor(this.gap / (this.day))
-    let h = Math.floor((this.gap % (this.day)) / (this.hour))
-    let m = Math.floor((this.gap % (this.hour)) / (this.min))
-    let s = Math.floor((this.gap % (this.min) / this.sec))
-
-    document.getElementById('yDay')!.innerHTML  = String(d) ;
-    document.getElementById('yHour')!.innerHTML = String(h);
-    document.getElementById('yMinute')!.innerHTML = String(m);
-    document.getElementById('ySec')!.innerHTML = String(s);
-  }
-
-  wildlifeDay(){
-    var currentDate = new Date().getTime()
-    this.gap = this.wildlifeDayDate - currentDate
-
-    let d  = Math.floor(this.gap / (this.day))
-    let h = Math.floor((this.gap % (this.day)) / (this.hour))
-    let m = Math.floor((this.gap % (this.hour)) / (this.min))
-    let s = Math.floor((this.gap % (this.min) / this.sec))
-
-    document.getElementById('wDay')!.innerHTML  = String(d) ;
-    document.getElementById('wHour')!.innerHTML = String(h);
-    document.getElementById('wMinute')!.innerHTML = String(m);
-    document.getElementById('wSec')!.innerHTML = String(s);
-  }
-
-  timer = setInterval(() => {
-    this.oceanDay()
-    this.peaceDay()
-    this.earthDay()
-    this.wildlifeDay()
-    this.yogaDay()
-  }, 1000);
-
-  onCustom(){
-    this.router.navigate(['option']);
-  }
-
-  ngOnDestroy(){
+  ngOnDestroy(): void {
     clearInterval(this.timer);
+  }
+
+  setEventDates()  {
+    const currentDate = new Date();
+  
+    // Ocean's Day
+    let oceanDay = new Date(currentDate.getFullYear(), 5, 8); // June is 5 because months are zero-based
+    if (currentDate > oceanDay) {
+      oceanDay.setFullYear(oceanDay.getFullYear() + 1);
+    }
+    this.oceanDayDate = oceanDay.getTime();
+  
+    // Peace Day
+    let peaceDay = new Date(currentDate.getFullYear(), 8, 21); // September is 8
+    if (currentDate > peaceDay) {
+      peaceDay.setFullYear(peaceDay.getFullYear() + 1);
+    }
+    this.peaceDayDate = peaceDay.getTime();
+  
+    // Earth Day
+    let earthDay = new Date(currentDate.getFullYear(), 3, 22); // April is 3
+    if (currentDate > earthDay) {
+      earthDay.setFullYear(earthDay.getFullYear() + 1);
+    }
+    this.earthDayDate = earthDay.getTime();
+  
+    // Yoga Day
+    let yogaDay = new Date(currentDate.getFullYear(), 5, 21); // June is 5
+    if (currentDate > yogaDay) {
+      yogaDay.setFullYear(yogaDay.getFullYear() + 1);
+    }
+    this.yogaDayDate = yogaDay.getTime();
+  
+    // Wildlife Day
+    let wildlifeDay = new Date(currentDate.getFullYear(), 2, 3); // March is 2
+    if (currentDate > wildlifeDay) {
+      wildlifeDay.setFullYear(wildlifeDay.getFullYear() + 1);
+    }
+    this.wildlifeDayDate = wildlifeDay.getTime();
+  }
+
+  onCustom(): void {
+    this.router.navigate(['option']);
   }
 }

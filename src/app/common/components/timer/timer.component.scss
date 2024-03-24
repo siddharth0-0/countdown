@@ -1,0 +1,24 @@
+.time-box{
+    position: absolute;
+    top: 30%;
+    color: whitesmoke;
+    left: 20%;
+    font-weight: 700;
+    display: flex;
+    flex-flow: row;
+    font-size: 18px;
+    width: 150px;
+    justify-content: space-between;
+    font-family: 'Orbitron', sans-serif;
+}
+@media only screen and (max-width: 1290px){
+    .time-box{
+        font: normal normal 600 14px 'Orbitron';
+    }
+}
+
+@media only screen and (max-width: 1290px){
+    .time-box{
+        flex-direction: column;
+    }
+}

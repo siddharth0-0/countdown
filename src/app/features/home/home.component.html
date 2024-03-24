@@ -13,92 +13,52 @@
         </div>
         <div class="card">
             <div class="card-img">
-                <!-- <img src="../../../assets/img/earth.png" alt=""> -->
-                <img src="https://fitguidebucket.s3.ap-south-1.amazonaws.com/assets/tree.jpg" alt="">
-            </div>
-            <div class="time-box">
-                <p id="eDay">00</p>
-                <span>:</span>
-                <p id="eHour">00</p>
-                <span>:</span>
-                <p id="eMinute">00</p>
-                <span>:</span>
-                <p id="eSec">00</p>
+                <img src="../../../assets/img/earth.png" alt="earth">
             </div>
             <div class="card-text">
                 <p>Earth's day Countdown</p>
             </div>
+            <app-timer [targetDate]="earthDayDate"></app-timer>
         </div>
         <div class="card">
             <div class="card-img">
-                <img src="https://fitguidebucket.s3.ap-south-1.amazonaws.com/assets/ocean.jpg" alt="">
+                <img src="../../../assets/img/ocean.png" alt="ocean">
             </div>
             <div class="card-text">
                 <p>Ocean's Day Countdown</p>
             </div>
-            <div class="time-box">
-                <p id="oday">00</p>
-                <span>:</span>
-                <p id="ohour">00</p>
-                <span>:</span>
-                <p id="ominute">00</p>
-                <span>:</span>
-                <p id="osec">00</p>
-            </div>
+            <app-timer [targetDate]="oceanDayDate"></app-timer>
         </div>
 
         <div class="card">
             <div class="card-img">
-                <img src="https://fitguidebucket.s3.ap-south-1.amazonaws.com/assets/yoga.jpg" alt="">
+                <img src="../../../assets/img/yoga.png" alt="yoga">
             </div>
             <div class="card-text">
                 <p>Yoga's Day Countdown</p>
             </div>
-            <div class="time-box">
-                <p id="yDay">00</p>
-                <span>:</span>
-                <p id="yHour">00</p>
-                <span>:</span>
-                <p id="yMinute">00</p>
-                <span>:</span>
-                <p id="ySec">00</p>
-            </div>
+            <app-timer [targetDate]="yogaDayDate"></app-timer>
         </div>
 
         <div class="card">
             <div class="card-img">
-                <img src="https://fitguidebucket.s3.ap-south-1.amazonaws.com/assets/deer.jpg" alt="">
+                <img src="../../../assets/img/wildlife.png" alt="deer">
             </div>
             <div class="card-text">
                 <p>Wildlife's Day Countdown</p>
             </div>
-            <div class="time-box">
-                <p id="wDay">00</p>
-                <span>:</span>
-                <p id="wHour">00</p>
-                <span>:</span>
-                <p id="wMinute">00</p>
-                <span>:</span>
-                <p id="wSec">00</p>
-            </div>
+            <app-timer [targetDate]="wildlifeDayDate"></app-timer>
+
         </div>
 
         <div class="card">
             <div class="card-img">
-                <img src="https://fitguidebucket.s3.ap-south-1.amazonaws.com/assets/peace.png" alt="">
+                <img src="../../../assets/img/peace.png" alt="peace">
             </div>
             <div class="card-text">
                 <p>Peace's Day Countdown</p>
             </div>
-            <div class="time-box">
-                <p id="pDay">00</p>
-                <span>:</span>
-                <p id="pHour">00</p>
-                <span>:</span>
-                <p id="pMinute">00</p>
-                <span>:</span>
-                <p id="pSec">00</p>
-            </div>
+            <app-timer [targetDate]="peaceDayDate"></app-timer>
         </div>
 
     </div>
